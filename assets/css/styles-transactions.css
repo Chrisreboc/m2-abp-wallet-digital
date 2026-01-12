@@ -1,0 +1,131 @@
+/* GLOBAL */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+/* NAV BAR ESTILOS INICIO */
+.navbar {
+    background-color: #FFFFFF;
+}
+
+.arrow-back {
+    width: 30px;
+    flex-shrink: 0;
+}
+
+.span-navbar {
+    color: black;
+}
+
+#cerrar-session-button {
+    font-size: 0.7rem;
+    border-radius: 15px;
+}
+/* NAV BAR ESTILOS FIN */
+
+/* INICIO SIDEBAR */
+.sidebar {
+    width: 280px;
+  flex-shrink: 0;
+}
+
+.list-group img{
+    width: 40px;
+    height: auto;
+}
+
+.list-group-item.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.list-group-item.disabled img {
+    filter: grayscale(100%);
+}
+/* FIN SIDEBAR */
+
+/* INICIO PROPIEDADES BODY */
+.body-color {
+    background: #bccbe0;
+    background: linear-gradient(12deg, rgba(188, 203, 224, 1) 0%, rgba(245, 245, 245, 1) 64%);
+}
+/* FIN PROPIEDADES BODY */
+
+/* INICIO ESTILOS MENU */
+.titulo-menu h2 {
+    font-size: 1.2rem;
+}
+#saldo-disponible {
+    font-size: 3rem;
+    font-weight: 600;
+}
+.secciones-pagina {
+    background-color: white;
+}
+
+.button-menu img{
+    width: 50px;
+    height: 50px;
+}
+
+.button-menu-cont button {
+    width: 56px;
+    height: 56px;
+    padding: 0;
+
+}
+
+.image-contact img {
+    width: 50px;
+    height: auto;
+}
+
+
+/* INICIO BENEFICIOS */
+.icon-sm-b img {
+    filter: grayscale(100%);
+}
+/* FIN BENEFICIOS */
+
+/* INICIO TARJETAS */
+
+.icono-settings img{
+    width: 30px;
+    height: auto;
+}
+.chip-size img{
+    width: 60px;
+    height: auto;
+}
+/* INICIO TARJETAS */
+/* FIN ESTILOS MENU */
+
+/* INICIO ESTILOS FOOTER */
+.footer-index {
+    background-color: #FFFFFF;
+    color: grey;
+}
+
+.shadow-top {
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.contacto h2 {
+    font-size: 1.5rem;
+}
+/* FIN ESTILOS FOOTER */
+
+/* INICIO MEDIA QUERIES */
+/* MEDIA QUERIES NAV */
+@media (min-width: 768px) {
+    .logo-dwallet {
+        width: 40px;
+    }
+}
+
+@media (min-width: 992px) {
+    .logo-dwallet {
+        width: 50px;
+    }
+}
+/* FIN MEDIA QUERIES */

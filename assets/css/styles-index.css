@@ -1,0 +1,90 @@
+/* NAV BAR ESTILOS INICIO */
+.navbar {
+    background-color: #FFFFFF;
+}
+
+.logo-dwallet {
+    width: 30px;
+    flex-shrink: 0;
+}
+
+.navbarwords {
+    margin: 1% 0 0 0;
+}
+
+/* NAV BAR ESTILOS FIN */
+
+/* INICIO PROPIEDADES BODY */
+.body-color {
+    background: #bccbe0;
+    background: linear-gradient(12deg, rgba(188, 203, 224, 1) 0%, rgba(245, 245, 245, 1) 64%);
+}
+/* FIN PROPIEDADES BODY */
+
+/* INCIO ESTILOS FORMULARIOR INICIO SESION */
+.in-sesion {
+    font-size: 2rem;
+}
+
+#sec-text {
+    color: grey;
+    font-size: 0.8rem;
+}
+
+.login-color {
+    background-color: white;
+}
+
+.bg-img-log{
+    background-image: url(/assets/img/img-dwallet-background.svg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+.log-image {
+    width: 400px;
+}
+
+#log-img-anim {
+    animation: float 2.5s linear infinite;
+}
+
+@keyframes float {
+    from {
+        transform: rotate(0deg) translateY(-12px) rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg) translateY(-12px) rotate(-360deg);
+    }
+}
+/* FIN ESTILOS FORMULARIO INICIO SESION */
+
+/* INICIO ESTILOS FOOTER */
+.footer-index {
+    background-color: #FFFFFF;
+    color: grey;
+}
+
+.shadow-top {
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.contacto h2 {
+    font-size: 1.5rem;
+}
+/* FIN ESTILOS FOOTER */
+
+/* INICIO MEDIA QUERIES */
+/* MEDIA QUERIES NAV */
+@media (min-width: 768px) {
+    .logo-dwallet {
+        width: 40px;
+    }
+}
+
+@media (min-width: 992px) {
+    .logo-dwallet {
+        width: 50px;
+    }
+}
+/* FIN MEDIA QUERIES */

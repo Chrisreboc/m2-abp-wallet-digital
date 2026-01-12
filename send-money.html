@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>m2-l4-send-money</title>
+
+    <!-- ESTILOS BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- MIS ESTILOS -->
+    <link rel="stylesheet" href="./assets/css/styles-send-money.css">
+
+    <!-- BOOTSTRAP JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+
+    <!-- JQUERY JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- JAVASCRIPT PERSONALIZADO -->
+    <script defer src="./assets/js/send-money.js"></script>
+
+</head>
+
+<body class="body-color d-flex flex-column min-vh-100">
+
+    <!-- INICIO NAVBAR -->
+    <nav class="navbar border-bottom shadow-sm d-flex" id="nav-direction">
+        <div class="container-fluid">
+            <a class="d-flex navbar-brand fw-bold w-80 fs-3 border rounded-circle p-0" href="./menu.html">
+                <img src="./assets/img/arrow_back_ios_24dp_999999_FILL0_wght400_GRAD0_opsz24.svg" alt="back"
+                    class="arrow-back img-fluid p-2">
+            </a>
+            <a href="./index.html">
+                <button type="button" class="btn btn-primary" id="cerrar-session-button" on-click="">Cerrar
+                    Sesión</button>
+            </a>
+        </div>
+    </nav>
+    <!-- FIN NAVBAR -->
+
+    <!-- INICIO MAIN -->
+    <main class="flex-grow-1 d-flex">
+        <!-- SIDEBAR -->
+        <aside class="sidebar d-none d-md-flex flex-column border bg-white">
+            <div class="title text-center">
+                <h2>Menu</h2>
+                <hr>
+                <p class="fw-bold">Administar</p>
+            </div>
+            <div class="list-group">
+                <a href="./deposit.html" class="list-group-item list-group-item-action">
+                    <img src="./assets/img/depositar-icon-menu.svg"> Depositar
+                </a>
+                <a href="./send-money.html" class="list-group-item list-group-item-action">
+                    <img src="./assets/img/transfer-icon-menu-v2.svg"> Transferir
+                </a>
+                <a href="./transactions.html" class="list-group-item list-group-item-action">
+                    <img src="./assets/img/ultmov-icon-menu-v2.svg"> Últimos Movimientos
+                </a>
+            </div>
+            <div class="title text-center">
+                <p class="fw-bold mt-2">Beneficios</p>
+            </div>
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action disabled bg-light" aria-disabled="true"
+                    tabindex="-1">
+                    <img src="./assets/img/directions_bus_24dp_64A8F9_FILL0_wght400_GRAD0_opsz24.svg"> Transporte bip!
+                </a>
+                <a href="#" class="list-group-item list-group-item-action disabled bg-light" aria-disabled="true"
+                    tabindex="-1">
+                    <img src="./assets/img/planet_24dp_64A8F9_FILL0_wght400_GRAD0_opsz24.svg"> Cine-Planet
+                </a>
+                <a href="#" class="list-group-item list-group-item-action disabled bg-light" aria-disabled="true"
+                    tabindex="-1">
+                    <img src="./assets/img/mobile_check_24dp_64A8F9_FILL0_wght400_GRAD0_opsz24.svg"> Recarga Celular
+                </a>
+                <a href="#" class="list-group-item list-group-item-action disabled bg-light" aria-disabled="true"
+                    tabindex="-1">
+                    <img src="./assets/img/more_horiz_24dp_64A8F9_FILL0_wght400_GRAD0_opsz24.svg"> Otros
+                </a>
+            </div>
+        </aside>
+        <!-- FIN SIDEBAR -->
+
+        <!-- CONTENIDO -->
+        <div class="content-wrapper d-flex align-items-center justify-content-center flex-grow-1">
+            <div class="container text-center">
+                <div class="row justify-content-center">
+                    <div class="col-12 d-md-9">
+                        <h2 class="titulo-menu d-md-none my-2">Transferir</h2>
+                        <div class="border rounded-3 p-3 my-3 shadow-sm secciones-pagina bg-white">
+                            <h3 class="">Enviar Dinero</h3>
+
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Selecciona Tarjeta</option>
+                                <option value="1">Tarjeta 1</option>
+                                <option value="2">Tarjeta 2</option>
+                                <option value="3">Tarjeta 3</option>
+                            </select>
+
+                            <form class="d-flex py-2" role="search">
+                                <input class="form-control" type="text" placeholder="Buscar Contacto"
+                                    aria-label="Search" id="searchContact" />
+                            </form>
+
+                            <div class="row list-group-item list-group-item-action image-contact d-flex m-0">
+
+                                <!-- tarjeta contacto -->
+
+                                <div id="contactListContainer" class="p-0 contactlist">
+                                    <div class="d-flex justify-content-center pb-2">
+                                        <div class="align-content-center border rounded my-1 col-2">
+                                            <img
+                                                src="./assets/img/account_circle_24dp_999999_FILL0_wght400_GRAD0_opsz24.svg">
+                                        </div>
+                                        <ul class="text-start p-3 border rounded my-1 list-group list-unstyled col-10">
+                                            <li class="fs-5 fw-bold">Lorem inpsut</li>
+                                            <hr class="my-1">
+                                            <li>Lorem alias</li>
+                                            <li>Banco Lorem</li>
+                                            <li>Tipo de Cuenta</li>
+                                            <li>Número de Cuenta</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+                                <!-- Button trigger modal -->
+
+                                <button type="button" id="btnAbrirModalContacto" class="btn btn-outline-secondary"
+                                    data-bs-toggle="modal" data-bs-target="#modalAgregarContacto"> <img
+                                        src="./assets/img/add_24dp_999999_FILL0_wght400_GRAD0_opsz24.svg" alt="">
+                                    Añadir Contacto
+                                </button>
+
+                                <!-- button trigger modal transferir -->
+
+                                <button type="button" class="btn btn-primary my-3 py-2" data-bs-toggle="modal"
+                                    data-bs-target="#modalEnviarDinero">
+                                    <img src="./assets/img/transfer-icon-menu-vw.svg" alt="transfer-icon-white">
+                                    <span>Transferir a Contacto</span>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <!-- FIN MAIN -->
+
+    <!-- INICIO MODALES -->
+
+    <!-- Modal añadir contacto -->
+    <div class="modal fade" id="modalAgregarContacto" tabindex="-1" aria-labelledby="modalAgregarContactoLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-5" id="modalAgregarContactoLabel">Agregar
+                        Nuevo Contacto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formAddContacto">
+
+                        <div class="mb-2">
+                            <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+                        </div>
+
+                        <div class="mb-2">
+                            <input type="text" class="form-control" id="apellido" placeholder="Apellido" required>
+                        </div>
+
+                        <div class="mb-2">
+                            <input type="text" class="form-control" id="alias" placeholder="Alias" required>
+                        </div>
+
+                        <select class="form-select my-2" aria-label="Default select example" id="banco" required>
+                            <option value="" selected disabled>Banco</option>
+                            <option value="1">Banco 1</option>
+                            <option value="2">Banco 2</option>
+                            <option value="2">Banco 3</option>
+                        </select>
+
+                        <select class="form-select my-2" aria-label="Default select example" id="tipoDeCuenta" required>
+                            <option value="" selected disabled>Tipo de Cuenta</option>
+                            <option value="1">Cuenta Rut</option>
+                            <option value="2">Cuenta Corriente</option>
+                        </select>
+
+                        <div class="mb-2">
+                            <input type="text" class="form-control" id="cbu" placeholder="Número de Cuenta"
+                                min="111111111" max="999999999" required>
+                        </div>
+                        <div class="mb-2">
+                            <button type="submit" class="btn btn-success">Agregar
+                                Contacto</button>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin modal añadir contacto -->
+
+    <!-- inicio Modal transferir a contacto -->
+    <div class="modal fade" id="modalEnviarDinero" tabindex="-1" aria-labelledby="modalEnviarDineroLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-5" id="modalEnviarDineroLabel">Transferir a Contacto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <p>Saldo Disponible: <b><span class="outputSaldo"></span></b></p>
+
+                    <form id="formEnviarDinero">
+                        <div class="mb-3">
+                            <select name="enviar-contacto" id="enviarContacto" class="form-control">
+                                <option value="" selected disabled>Selecciona Contacto</option>
+                                <option value="1">Contacto 1</option>
+                                <option value="2">Contacto 2</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="number" class="form-control" min="50" value="50" id="enviarMonto"
+                                name="enviar-monto">
+                        </div>
+
+                        <button type="submit"
+                            class="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-2 boton-trans-t my-3">
+
+                            <img src="./assets/img/transfer-icon-menu-vw.svg" alt="transfer-icon-white">
+                            <span>Transferir</span>
+                        </button>
+
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FIN MODALES -->
+
+    <!-- INICIO FOOTER -->
+    <footer class="footer-index text-center">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col py-3 border-top shadow-top contacto">
+                    <h2>CONTACTANOS</h2>
+                    <hr>
+                    <p>Telefono: +569 XXXXXXXX</p>
+                    <p>Correo: email@email.com</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- FIN FOOTER -->
+</body>
+
+</html>
